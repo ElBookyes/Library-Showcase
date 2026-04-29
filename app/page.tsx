@@ -15,7 +15,8 @@ function rollDie() {
   return Math.floor(Math.random() * 6) + 1;
 }
 
-function Die({ value }: { value: number }) {
+function Die(props: { value: number }) {
+  const value = props.value;
   const pips = new Set(pipPositions[value]);
   return (
     <div
